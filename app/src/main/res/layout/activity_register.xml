@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/registerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:orientation="vertical"
+    tools:context=".ui.LoginActivity">
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="82dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/logo_bg"
+        tools:ignore="ContentDescription" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="350dp"
+        android:layout_height="450dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        app:cardCornerRadius="20dp"
+        app:cardMaxElevation="50dp">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:text="Cedula"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/EtCedula"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:autofillHints="no"
+                    android:hint="cedula"
+                    android:inputType="number" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:text="Edad"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/EtAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:autofillHints="no"
+                    android:hint="edad"
+                    android:inputType="number" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:text="Genero"
+                    android:textColor="@color/black" />
+
+                <Spinner
+                    android:id="@+id/spGender"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:text="Nombre"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/EtNombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:autofillHints="no"
+                    android:hint="nombre"
+                    android:inputType="text" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:text="Apellido"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/EtApellido"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:autofillHints="no"
+                    android:hint="apellido"
+                    android:inputType="text" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:text="Telefono"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/EtTelefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:autofillHints="no"
+                    android:hint="telefono"
+                    android:inputType="phone" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:text="Email"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/EtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:autofillHints="no"
+                    android:hint="email"
+                    android:inputType="textEmailAddress" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:boxStrokeColor="@color/teal_200"
+                    app:endIconTint="@color/black"
+                    app:hintTextColor="@color/black"
+                    app:passwordToggleContentDescription="password"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/EtPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/white"
+                        android:hint="contraseña"
+                        android:inputType="textPassword"
+                        android:textSize="20sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btnRegistrarse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/black"
+                    android:text="Registrarse"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/gotoLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:text="¿Estas registrado? vamos al inicio"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

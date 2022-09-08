@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/appoiment"
+        android:icon="@drawable/ic_turnos"
+        android:iconTint="@color/purple_700"
+        android:title="Turnos" />
+    <item
+        android:id="@+id/exam"
+        android:icon="@drawable/ic_exam"
+        android:iconTint="@color/purple_700"
+        android:title="Examen" />
+
+    <item
+        android:id="@+id/user"
+        android:icon="@drawable/ic_person"
+        android:iconTint="@color/purple_700"
+        android:title="Perfil" />
+</menu>

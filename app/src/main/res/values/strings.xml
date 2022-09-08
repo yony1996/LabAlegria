@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Laboratorio Alegria</string>
+    <string name="ordeCode">Orden # %1$d</string>
+    <string name="start">Start</string>
+    <string name="close">Close</string>
+    <string name="saludo">Bienvenido %1$s</string>
+    <string name="appoiment">Turno # %1s</string>
+    <string name="examen">Examen # %1s</string>
+    <string name="date_format">%1$d-%2$s-%3$s</string>
+</resources>

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeee"
+    tools:context=".ui.CreateAppoimentActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/laboratorio"
+            android:contentInsetStart="0dp"
+            android:contentInsetLeft="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/btnBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:padding="18dp"
+                        app:srcCompat="@drawable/ic_back" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="82dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/logo_bg"
+        tools:ignore="ContentDescription" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="320dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="25dp"
+        app:layout_constraintTop_toBottomOf="@id/img"
+        app:cardCornerRadius="20dp"
+        app:cardMaxElevation="50dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/tvFecha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:text="Escoge Una Fecha"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/sel_fecha"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/shape_edit_round_white_2"
+                android:gravity="center"
+                android:hint="2022-08-07"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvFecha"
+                tools:text="2022-08-07" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_appoiment"
+                app:layout_constraintBottom_toBottomOf="@+id/sel_fecha"
+                app:layout_constraintEnd_toEndOf="@id/sel_fecha"
+                app:layout_constraintTop_toTopOf="@id/sel_fecha"
+                app:tint="@color/laboratorio" />
+
+            <TextView
+                android:id="@+id/tvHora"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="Escoge la hora"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sel_fecha" />
+
+            <Spinner
+                android:id="@+id/spHoras"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/shape_edit_round_white_2"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/tvHora" />
+
+            <ImageView
+                android:id="@+id/arrowSp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_arrow_down"
+                app:layout_constraintBottom_toBottomOf="@id/spHoras"
+                app:layout_constraintEnd_toEndOf="@id/spHoras"
+                app:layout_constraintTop_toTopOf="@id/spHoras"
+                app:tint="@color/laboratorio" />
+
+            <TextView
+                android:id="@+id/spalert"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/shape_edit_round_white_2"
+                android:gravity="center"
+                android:text="No se encontraron horas para la fecha seleccionada"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/tvHora" />
+
+            <TextView
+                android:id="@+id/tvExam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Escoge el Examen"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/spHoras"
+            />
+
+            <Spinner
+                android:id="@+id/spExam"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/shape_edit_round_white_2"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/tvExam" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_arrow_down"
+                app:layout_constraintBottom_toBottomOf="@id/spExam"
+                app:layout_constraintEnd_toEndOf="@id/spExam"
+                app:layout_constraintTop_toTopOf="@id/spExam"
+                app:tint="@color/laboratorio" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btns"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_edit_round_white_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:text="Cancelar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guideline1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/storeAppoiment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:text="Registar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guideline1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

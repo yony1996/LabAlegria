@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/ic_home"
+            android:iconTint="@color/purple_700"
+            android:title="Inicio" />
+        <item
+            android:id="@+id/exam"
+            android:icon="@drawable/ic_exam"
+            android:iconTint="@color/purple_700"
+            android:title="Examen" />
+    </group>
+
+
+</menu>
